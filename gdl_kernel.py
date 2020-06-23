@@ -66,12 +66,12 @@ class GDLKernel(Kernel):
         sig = signal.signal(signal.SIGINT, signal.SIG_DFL)
         try:
             self._executable = find_executable("gdl")
-            self._child  = spawn(self._executable,timeout = 300, encoding='utf-8')
+            self._child  = spawn(self._executable+' --use-wx ',timeout = 300, encoding='utf-8')
             self.gdlwrapper = replwrap.REPLWrapper(self._child,u"GDL> ",None)
         finally:
             signal.signal(signal.SIGINT, sig)
 
-        self.gdlwrapper.run_command("!quiet=1 & defsysv,'!inline',0 & !more=0".rstrip(), timeout=None)
+        self.gdlwrapper.run_command("!quiet=1 & defsysv,'!inline',1 & !more=0".rstrip(), timeout=None)
         # Compile GDL routines/functions
         dirname = os.path.dirname(os.path.abspath(__file__))
         self.gdlwrapper.run_command(".compile "+dirname+"/snapshot.pro",timeout=None)
