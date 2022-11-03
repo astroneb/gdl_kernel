@@ -1,5 +1,5 @@
 from ipykernel.kernelbase import Kernel
-from IPython.utils.path import locate_profile
+from IPython.paths import locate_profile
 from IPython.core.displaypub import publish_display_data
 from pexpect import replwrap,EOF,spawn
 
@@ -66,7 +66,8 @@ class GDLKernel(Kernel):
         sig = signal.signal(signal.SIGINT, signal.SIG_DFL)
         try:
             self._executable = find_executable("gdl")
-            self._child  = spawn(self._executable+' --use-wx ',timeout = 300, encoding='utf-8')
+            #self._child  = spawn(self._executable+' --use-wx ',timeout = 300, encoding='utf-8')
+            self._child  = spawn(self._executable,timeout = 300, encoding='utf-8')
             self.gdlwrapper = replwrap.REPLWrapper(self._child,u"GDL> ",None)
         finally:
             signal.signal(signal.SIGINT, sig)
