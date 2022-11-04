@@ -2,8 +2,7 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/equib/gdl_kernel/HEAD?labpath=notebooks%2Fdemo_gdl.ipynb)
 
-Demo: [Notebook](notebooks/demo_gdl.ipynb) on [Binder](https://mybinder.org/v2/gh/equib/gdl_kernel/HEAD?labpath=notebooks%2Fdemo_gdl.ipynb):
-
+Demo: [Notebook](notebooks/demo_gdl.ipynb) on [Binder](https://mybinder.org/v2/gh/equib/gdl_kernel/HEAD?labpath=notebooks%2Fdemo_gdl.ipynb).
 
 This repository also makes use of [GDL](https://github.com/gnudatalanguage/gdl) to run IDL/GDL codes in Jupyter lab. This requires the following component:
 
