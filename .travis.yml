@@ -15,9 +15,3 @@ install:
   - pip install --quiet ipykernel
   - pip install --quiet IPython
   - python setup.py install
-
-script: 
-  - nosetests --with-coverage --cover-package=gdl_kernel
-
-after_success:
-  - coveralls
