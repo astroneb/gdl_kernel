@@ -1,5 +1,7 @@
 # GDL kernel for Jupyter
 
+[![Build Status](https://app.travis-ci.com/equib/gdl_kernel.svg?branch=master)](https://app.travis-ci.com/github/equib/gdl_kernel)
+[![Build Status](https://ci.appveyor.com/api/projects/status/w65lp35d6wlas36x?svg=true)](https://ci.appveyor.com/project/danehkar/gdl_kernel)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/equib/gdl_kernel/HEAD?labpath=demo_gdl.ipynb)
 
 Demo: [Notebook](demo_gdl.ipynb) on [Binder](https://mybinder.org/v2/gh/equib/gdl_kernel/HEAD?labpath=demo_gdl.ipynb).
