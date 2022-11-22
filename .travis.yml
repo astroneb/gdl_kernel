@@ -14,8 +14,6 @@ install:
   - pip install --quiet jupyter_client
   - pip install --quiet ipykernel
   - pip install --quiet IPython
-  - pip install --quiet re
-  - pip install --quiet signal
   - python setup.py install
 
 script: 
